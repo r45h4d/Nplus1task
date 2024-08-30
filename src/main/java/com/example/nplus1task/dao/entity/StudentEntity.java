@@ -26,5 +26,6 @@ public class StudentEntity {
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "course_id")
     )
+    @ToString.Exclude
     private List<CourseEntity> courses;
 }

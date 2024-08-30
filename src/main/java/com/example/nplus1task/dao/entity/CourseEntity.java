@@ -23,5 +23,6 @@ public class CourseEntity {
     private String title;
 
     @ManyToMany(mappedBy = "courses", fetch = FetchType.LAZY)
+    @ToString.Exclude
     private List<StudentEntity> students;
 }
