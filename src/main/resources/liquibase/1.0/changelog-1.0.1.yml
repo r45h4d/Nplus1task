@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create courses table
+      author: Rashad Amanov
+      changes:
+        - createTable:
+            tableName: courses
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(64)
